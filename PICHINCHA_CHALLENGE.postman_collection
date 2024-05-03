@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "2d0973c0-f699-46b6-be7f-b15e894b2acc",
+		"name": "Pichincha-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6722910"
+	},
+	"item": [
+		{
+			"name": "ms-auth",
+			"item": [
+				{
+					"name": "validateUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"devar_giri@boyle.test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8100/v1/auth/validate-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"v1",
+								"auth",
+								"validate-user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms-support",
+			"item": [
+				{
+					"name": "getAllExchangeRates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8101/v1/support/exchange-rate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8101",
+							"path": [
+								"v1",
+								"support",
+								"exchange-rate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveExchangeRate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjY4ODAxMTUsImlhdCI6MTcxNDY5NDcwNCwiZXhwIjoxNzE0Njk2NTA0fQ.EmNoFj02ifZGP8iOnA4a3jIvkhN2m23mXJS-iqPYB9k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 100.00,\r\n    \"originCurrency\": \"PEN\",\r\n    \"targetCurrency\": \"USD\",\r\n    \"exchangeRate\": 3.69\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8101/v1/support/exchange-rate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8101",
+							"path": [
+								"v1",
+								"support",
+								"exchange-rate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteExchangeRate",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjY4ODAxMTUsImlhdCI6MTcxNDY5NDcwNCwiZXhwIjoxNzE0Njk2NTA0fQ.EmNoFj02ifZGP8iOnA4a3jIvkhN2m23mXJS-iqPYB9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8101/v1/support/exchange-rate/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8101",
+							"path": [
+								"v1",
+								"support",
+								"exchange-rate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateExchangeRate",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjY4ODAxMTUsImlhdCI6MTcxNDY5NDcwNCwiZXhwIjoxNzE0Njk2NTA0fQ.EmNoFj02ifZGP8iOnA4a3jIvkhN2m23mXJS-iqPYB9k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 100.00,\r\n    \"originCurrency\": \"PEN\",\r\n    \"targetCurrency\": \"USD\",\r\n    \"exchangeRate\": 3.73\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8101/v1/support/exchange-rate/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8101",
+							"path": [
+								"v1",
+								"support",
+								"exchange-rate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "goRestAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
