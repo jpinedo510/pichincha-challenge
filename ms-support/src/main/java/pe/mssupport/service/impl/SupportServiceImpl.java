@@ -62,7 +62,7 @@ public class SupportServiceImpl implements SupportService {
     }
 
     @Override
-    public void deleteExchangeRate(String token, Integer id, ExchangeRateDto request) {
+    public void deleteExchangeRate(String token, Integer id) {
         exchangeRateRepository.deleteById(id);
     }
 

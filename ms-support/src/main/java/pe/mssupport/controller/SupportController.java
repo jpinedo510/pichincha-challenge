@@ -40,10 +40,9 @@ public class SupportController {
 
     @DeleteMapping(path = "/exchange-rate/{id}")
     public void deleteExchangeRate(@RequestHeader HttpHeaders headers,
-                                   @PathVariable("id") Integer id,
-                                   @RequestBody ExchangeRateDto request) {
+                                   @PathVariable("id") Integer id) {
         val token = validateHeaderAndGetToken(headers);
-        supportService.deleteExchangeRate(token, id, request);
+        supportService.deleteExchangeRate(token, id);
     }
 
     private String validateHeaderAndGetToken(HttpHeaders headers) {

@@ -12,5 +12,5 @@ public interface SupportService {
 
     public void updateExchangeRate(String token, Integer id, ExchangeRateDto request);
 
-    public void deleteExchangeRate(String token, Integer id, ExchangeRateDto request);
+    public void deleteExchangeRate(String token, Integer id);
 }
